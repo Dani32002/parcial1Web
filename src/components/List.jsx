@@ -32,26 +32,26 @@ export default function List() {
                 <table className="table">
                     <thead className="tableHead">
                         <tr>
-                            <th className="tableHead">#</th>
-                            <th className="tableHead"><FormattedMessage id='Marca'/></th>
-                            <th className="tableHead"><FormattedMessage id='Línea'/></th>
+                            <th className="tableHead id">#</th>
+                            <th className="tableHead marca"><FormattedMessage id='Marca'/></th>
+                            <th className="tableHead linea"><FormattedMessage id='Línea'/></th>
                             <th className="tableHead"><FormattedMessage id='Modelo'/></th>
                         </tr>
                     </thead>
                     <tbody>
                         { cars.map((car) => (
-                            <tr key={car.id} onClick={() => clickHandler(car.id)}>
-                                <td><span className="contentSpan"><strong>{car.id}</strong></span></td>
-                                <td><span className="contentSpan">{ car.marca }</span></td>
-                                <td><span className="contentSpan">{ car.linea }</span></td>
+                            <tr className="clickableRow" key={car.id} onClick={() => clickHandler(car.id)}>
+                                <td className="id"><span className="contentSpan"><strong>{car.id}</strong></span></td>
+                                <td className="marca"><span className="contentSpan">{ car.marca }</span></td>
+                                <td className="linea"><span className="contentSpan">{ car.linea }</span></td>
                                 <td><span className="contentSpan">{ car.modelo }</span></td>
                             </tr>
                         )) }
                     </tbody>
                 </table>
             </Col>
-            <Col xs={5}>
-                { show && <Detail cars={cars} carId={selectedId}/>}
+            <Col xs={5} className="detailContainer">
+                { show && <Detail carId={selectedId}/>}
             </Col>
         </Row>
     </div>

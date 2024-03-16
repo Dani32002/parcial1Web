@@ -14,6 +14,7 @@
   width: 625px;
   height: 369px;
   padding-top:3px;
+  margin-bottom: 118px;
 }
 
 .formContainer{
@@ -61,9 +62,7 @@ h3 {
   height: 61px
 }
 
-.table {
-  width: 786px !important;
-}
+
 
 .header {
   width: 1304px;
@@ -136,6 +135,10 @@ h3 {
   margin-right: 50px;
 }
 
+.ingresar:hover {
+  background-color: rgba(0, 59, 100, 1) !important;
+}
+
 .cancelar {
   background-color: #E75D5D !important;
   border: none !important;
@@ -144,11 +147,16 @@ h3 {
   color: black !important;
 }
 
+.cancelar:hover {
+  background-color: rgba(231, 43, 93, 1) !important;
+}
+
 .contact {
   margin-left: 15px;
-  margin-top: 4px;
   height: 23px;
   font-size: 18px;
+  margin-bottom: 0px !important;
+  margin-bottom: 9px !important;
 }
 
 .main {
@@ -158,9 +166,10 @@ h3 {
 }
 
 .contactFrame {
+  display: grid;
+  align-content: flex-end;
   height: 36px;
   margin-left: 399px;
-  margin-top: 118px;
   margin-bottom: 15px;
 }
 
@@ -174,11 +183,12 @@ h3 {
 
 .listSection {
   width: 100%;
+  margin-bottom: 123px;
 }
 
 .tableArea {
   font-size: 18px;
-  width: 859px;
+  width: 830px !important;
   margin-left: 98px;
   padding: 0px;
 }
@@ -188,9 +198,11 @@ h3 {
 }
 
 .table {
-  width: 787px !important;
-  margin-left: 23px;
+  width: 786px !important;
+  margin-right: 31px;
+  margin-left: 13px;
   margin-top: 25px;
+  margin-bottom: 0px !important;
 }
 
 .tableHead {
@@ -207,11 +219,85 @@ tr {
 }
 
 td, th {
-  padding-left: 15px !important;
+  padding-left: 16px !important;
   padding-top: 13.19px !important;
   padding-bottom: 13.19px !important;
 }
 
 td {
   border-bottom: 1px solid #D9D9D9 !important;
+}
+
+.detailContainer {
+  width: 427px !important;
+  height: 351px;
+  margin-top: 25px !important;
+  padding: 0px !important;
+}
+
+.detailCard {
+  width: 427px !important;
+  height: 351px;
+  border-radius: 0px !important;
+  border: 1px solid #000000 !important;
+  background-color: rgba(217, 217, 217, 0.5) !important;
+}
+
+.detailCard > .h5 {
+  width: 427px;
+  height: 46px;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  text-align: center;
+  margin-top: 19px !important;
+  margin-bottom: 8px;
+}
+
+.detailCard > img {
+  width: 318px;
+  height: 159px;
+  margin-left: 64px;
+  margin-bottom: 30px;
+}
+
+.dataDetailContainer {
+  width: 321px;
+  height: 75px;
+  margin-left: 43px;
+  margin-bottom: 14px;
+}
+
+.card-text {
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.id {
+  width: 73px;
+}
+
+.marca {
+  width: 183px;
+}
+
+.linea {
+  width: 183px;
+}
+
+.form-control {
+  font-size: 20px !important;
+}
+
+.clickableRow tr {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.clickableRow tr:hover {
+  background-color: rgba(50, 50, 50, 0.23) !important;
+}
+
+.is-invalid {
+  background-image: none !important;
+  border: 1px solid #6A0B0B !important;
 }

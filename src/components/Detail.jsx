@@ -18,14 +18,14 @@ export default function Detail({ carId }) {
   },[carId]);
 
   return (
-    <div>
-        <Card>
-            <Card.Title>{ car.marca + " " + car.linea }</Card.Title>
-            <Image src={car.imagen} alt={car.linea} />
-            <Card.Text>{'->'}<FormattedMessage id='Kilometraje'/>: {car.kilometraje}</Card.Text>
-            <Card.Text>{'->'}<FormattedMessage id='Color'/>: {car.color}</Card.Text>
-            <Card.Text>{'->'}<FormattedMessage id='Referencia'/>: {car.referencia}</Card.Text>
-        </Card>
-    </div>
+      <Card className="detailCard">
+          <Card.Title className="cardTitle">{ car.marca + " " + car.linea }</Card.Title>
+          <Image src={car.imagen} alt={car.linea} />
+          <div className="dataDetailContainer">
+            <Card.Text>{'-> '}<FormattedMessage id='Kilometraje'/>: {car.kilometraje}<br />
+              {'-> '}<FormattedMessage id='Color'/>: {car.color} <br />
+              {'-> '}<FormattedMessage id='Referencia'/>: {car.referencia}</Card.Text>
+          </div>
+      </Card>
   )
 }

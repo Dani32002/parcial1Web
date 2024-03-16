@@ -11,8 +11,7 @@ import spanishMessages from './locales/es.json'
 
 const checkLanguageNavigator = () => {
   console.log(navigator.language);
-  //return navigator.language.startsWith("en");
-  return false;
+  return navigator.language.startsWith("en");
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

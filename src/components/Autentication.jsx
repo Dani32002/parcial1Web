@@ -57,6 +57,7 @@ export default function Autentication() {
                   value={formValues.username} 
                   onChange={handleUsername}
                   type="username" 
+                  isInvalid={error}
                   />
             </Form.Group>
             <Form.Group className="formBasicPass" controlId="formBasicPass">
@@ -65,6 +66,7 @@ export default function Autentication() {
                 value={formValues.password} 
                 onChange={handlePassword}
                 type="password" 
+                isInvalid = {error}
                 />
             </Form.Group>
             <div className="buttonContainer">
