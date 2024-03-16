@@ -1,89 +1,217 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 .banner {
   width: 1244px;
   height: 323px;
+  margin: 0px;
+  margin-left: 29px
 }
 
 .centerdedDiv{
-  width: 100%;
-  display:flex;
-  justify-content: center;
+  margin-left: 377px;
+  margin-top:39px;
+  width: 625px;
+  height: 369px;
+  padding-top:3px;
 }
 
 .formContainer{
-  width:556px;
-  margin-top: 49px;
+  width:610px;
+  height: 367px;
+  margin-left: 25px;
+  padding-top: 8px;
 }
 
 h3 {
   text-align: center;
-  font-weight: bold;
-  font-size: 32px;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  width: 556px;
+  height: 42px;
+  margin-left: 17px;
+  margin-bottom: 24px !important;
 }
 
-.formLabel{
+.formLabelUser{
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 186px;
+  height: 24px;
   font-weight: bold;
+  margin-bottom: 9px !important;
 }
 
-.buttonContainer2{
-  margin-bottom: 144px;
-}
-
-p {
-  text-align: center;
+.buttonContainer{
+  margin-top: 27px;
+  margin-left: 17px;
+  margin-bottom: 22px;
 }
 
 .title {
-  margin-top: 14px;
   font-size: 36px;
-  font-weight: bolder;
-}
-
-.main {
-  margin-left: 98px;
-  margin-right: 98px;
+  margin-left: 14px;
+  margin-bottom: 7px;
+  font-family: "Jaldi", sans-serif;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 700;
+  display:flex;
+  align-items: center;
+  height: 61px
 }
 
 .table {
-  width: 786px;
+  width: 786px !important;
+}
+
+.header {
+  width: 1304px;
+  height:447px;
+  margin-left: 84px;
+  padding-top: 14px;
+}
+
+.line {
+  margin:0px;
+  width: 1244.02px;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.77);
+}
+
+.lineShadow {
+  margin-left: 13.99px;
+  width: 1244.02px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+  margin-bottom: 6px;
+}
+
+.line2 {
+  margin:0px;
+  margin-left: 13.99px;
+  width: 1244.02px;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.77);
+  margin-top: 32px;
+}
+
+.formBasicUser {
+  margin-left: 17px;
+  margin-bottom: 0px !important;
+}
+
+.formBasicPass {
+  margin-left: 17px;
+  margin-bottom: 0px !important;
+}
+
+.formLabelPass {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-weight: bold;
+  margin-bottom: 9px !important;
+  width: 115px;
+}
+
+#formBasicUser, #formBasicPass {
+  width: 556px;
+  height: 58px;
+  background-color: #D9D9D9;
+  border-radius: 0px;
+  border: none;
+  margin-bottom: 9px;
+}
+
+.btn {
+  width: 253px;
+  height: 53px;
+  border-radius: 0px !important;
+}
+
+.ingresar {
+  background-color: #003B93 !important;
+  border: none !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  margin-right: 50px;
+}
+
+.cancelar {
+  background-color: #E75D5D !important;
+  border: none !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  color: black !important;
+}
+
+.contact {
+  margin-left: 15px;
+  margin-top: 4px;
+  height: 23px;
+  font-size: 18px;
+}
+
+.main {
+  height: 1024px;
+  width: 1440px;
+  font-family: "Inter", sans-serif;
+}
+
+.contactFrame {
+  height: 36px;
+  margin-left: 399px;
+  margin-top: 118px;
+  margin-bottom: 15px;
+}
+
+.errorMessage{
+  margin-top:22px;
+  height: 41px;
+  font-size: 20px;
+  color: #CD3232;
+  font-weight: bold;
+}
+
+.listSection {
+  width: 100%;
+}
+
+.tableArea {
+  font-size: 18px;
+  width: 859px;
+  margin-left: 98px;
+  padding: 0px;
+}
+
+.tableArea.col-7 {
+  padding: 0px;
+}
+
+.table {
+  width: 787px !important;
+  margin-left: 23px;
+  margin-top: 25px;
+}
+
+.tableHead {
+  background-color: #333A40 !important;
+}
+
+.tableHead th {
+  font-weight: bold;
+  color: white !important;
+}
+
+tr {
+  height: 50px;
+}
+
+td, th {
+  padding-left: 15px !important;
+  padding-top: 13.19px !important;
+  padding-bottom: 13.19px !important;
+}
+
+td {
+  border-bottom: 1px solid #D9D9D9 !important;
 }

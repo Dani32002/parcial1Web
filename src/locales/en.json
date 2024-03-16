@@ -1,0 +1,15 @@
+{
+    "Inicio de Sesión": "Sign In",
+    "Nombre de usuario": "Username",
+    "Contraseña": "Password",
+    "Ingresar": "Enter",
+    "Cancelar": "Cancel",
+    "Contáctenos":"Contact us",
+    "error": "Authentication error. Check your credentials",
+    "Marca": "Brand",
+    "Línea": "Line",
+    "Modelo": "Model",
+    "Kilometraje": "Mileage (Km)",
+    "Color": "Color",
+    "Referencia": "Reference"
+}

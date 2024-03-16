@@ -4,16 +4,19 @@ import Autentication from './components/Autentication';
 import banner from './carroBanner.png';
 import { Image } from 'react-bootstrap';
 import List from './components/List';
+import { FormattedMessage } from 'react-intl';
 
 function App() {
   return (
     <div className="main">
-      <h1 className="title">TuSegundazo.com</h1>
-      <hr />
-      <div className="centerdedDiv">
+      <div className="header">
+        <h1 className="title">TuSegundazo.com</h1>
+        <div className="lineShadow">
+          <hr className="line"/>
+        </div>
         <Image className="banner" src={banner} alt="banner"/>
+        <hr className="line2"/>
       </div>
-      <hr />
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Autentication />}/>
@@ -21,7 +24,9 @@ function App() {
           <Route path="/list" element={<List />} />
         </Routes>
       </BrowserRouter>
-      <p>Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
+      <div className="contactFrame">
+        <p className="contact"><FormattedMessage id='Contáctenos'/>: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
+      </div>
     </div>
   );
 }

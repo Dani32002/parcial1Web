@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Detail from './Detail';
 import { Col, Row } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 export default function List() {
 
@@ -8,31 +9,15 @@ export default function List() {
 
   const [selectedId, setSelectedId] = useState(0);
 
-  const [cars, setCars] = useState([
-    {
-         "id": 1,
-         "marca": "Renault",
-         "linea": "Kangoo",
-         "referencia": "VU Express",
-         "modelo": 2017,
-         "kilometraje": 93272,
-         "color": "Blanco",
-         "imagen": "https://github.com/Uniandes-isis2603/recursos-isis2603/blob/master/images/202410/kangoo.jpeg?raw=true"
-     },
-     {
-         "id": 2,
-         "marca": "Chevrolet",
-         "linea": "Spark",
-         "referencia": "Life",
-         "modelo": 2018,
-         "kilometraje": 55926,
-         "color": "Plata",
-         "imagen": "https://github.com/Uniandes-isis2603/recursos-isis2603/blob/master/images/202410/spark.jpeg?raw=true"
-     }
- ]);
+  const [cars, setCars] = useState([]);
 
   useEffect(()=> {
-
+    const listUrl = 'http://localhost:3001/cars';
+    fetch(listUrl)
+        .then(response => response.json())
+        .then(data => {
+            setCars(data);
+        });
   },[]);
 
   const clickHandler = (carId) => {
@@ -41,25 +26,25 @@ export default function List() {
   }
 
   return (
-    <div>
-        <Row>
-            <Col xs={7}>
+    <div className="listSection">
+        <Row className="listSection">
+            <Col xs={7} className="tableArea">
                 <table className="table">
-                    <thead>
+                    <thead className="tableHead">
                         <tr>
-                            <th>#</th>
-                            <th>Marca</th>
-                            <th>Línea</th>
-                            <th>Modelo</th>
+                            <th className="tableHead">#</th>
+                            <th className="tableHead"><FormattedMessage id='Marca'/></th>
+                            <th className="tableHead"><FormattedMessage id='Línea'/></th>
+                            <th className="tableHead"><FormattedMessage id='Modelo'/></th>
                         </tr>
                     </thead>
                     <tbody>
                         { cars.map((car) => (
                             <tr key={car.id} onClick={() => clickHandler(car.id)}>
-                                <td>{car.id}</td>
-                                <td>{ car.marca }</td>
-                                <td>{ car.linea }</td>
-                                <td>{ car.modelo }</td>
+                                <td><span className="contentSpan"><strong>{car.id}</strong></span></td>
+                                <td><span className="contentSpan">{ car.marca }</span></td>
+                                <td><span className="contentSpan">{ car.linea }</span></td>
+                                <td><span className="contentSpan">{ car.modelo }</span></td>
                             </tr>
                         )) }
                     </tbody>
